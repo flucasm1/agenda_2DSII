@@ -8,6 +8,7 @@
     <title>Ação</title>
 </head>
 <body class="fundo">
+    <h2 class="w3-container w3-teal">Resultado do Cadastro</h2>
     <div class="fontes">
     <?php
     $nome = $_POST['nome'];
@@ -18,13 +19,13 @@
     <div class="fontes">
     <?php
     $idade = $_POST['idade'];
-    echo "Sua idade é: $idade";
+    echo "Você tem $idade anos";
     echo '<br>';
     ?></div>
     <div class="fontes">
     <?php
         $profissao = $_POST['profi'];
-        echo "Sua profissão é: $profissao";
+        echo "Atua como $profissao";
         echo '<br>';
     ?> </div>
     <div class="fontes">
@@ -37,14 +38,16 @@
     <div class="fontes">
     <?php
         $experiencia = $_POST['exp'];
-        echo "Suas experiências : $experiencia";
+        echo "Suas experiências: $experiencia";
         echo '<br>';
     ?>
     </div>
     <div class="fontes">
     <?php
         if($idade >= 18){
-            echo "Obrigado pelo cadastro, $nome! Seu interesse na vaga de $profissao foi registrado. Sua experiência informada foi: $experiencia.";;
+            echo "Obrigado pelo cadastro, $nome! Seu interesse na vaga de $profissao foi registrado.";
+            echo '<br>';
+            echo "Sua experiência e salário desejado foram anotados para análise.";
         }
         else{
            echo "Você não tem idade suficiente para se candidatar a esta vaga.";
@@ -52,6 +55,6 @@
     ?>
     </div>
     </div>
-    <input name="Voltar" type="submit" id="voltar" value="Voltar" onclick="window.location.href='request.html'">
+    <input name="Voltar" type="submit" class="w3-btn w3-teal" value="Voltar" onclick="window.location.href='request.html'">
 </body>
 </html>
